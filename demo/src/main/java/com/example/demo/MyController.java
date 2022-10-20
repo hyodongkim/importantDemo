@@ -46,7 +46,7 @@ public class MyController {
 
 		dao.update(dto);
 		
-		model.addAttribute("list",dao.select_one(id));
+		model.addAttribute("list",dao.select());
 
 		return "Test";
 
@@ -57,7 +57,7 @@ public class MyController {
 
 		dao.delete(id);
 
-		model.addAttribute("list", dao.select_one(id));
+		model.addAttribute("list", dao.select());
 
 		return "Test";
 
